@@ -2,7 +2,7 @@
 The below Machine Learning code applies classification
 to a dataset which provides the outcome of the people
 at a certain age and salary are likely to purchase an SUV
-using K-NN classification model. 
+using Support Vector Machine classification model. 
 '''
 
 # Importing the libraries
