@@ -2,7 +2,7 @@
 The below Machine Learning code applies classification
 to a dataset which provides the outcome of the people
 at a certain age and salary are likely to purchase an SUV
-using Random Forest classification model. 
+using Decision Tree classification model. 
 '''
 
 # Importing the libraries
@@ -11,7 +11,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score
 from matplotlib.colors import ListedColormap
 
@@ -28,8 +28,8 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 x_test = sc.transform(X_test)
 
-# Training the Random Forest Classification model on the Training set
-classifier = RandomForestClassifier(n_estimators=10, criterion='entropy', random_state=0)
+# Training the Decision Tree Classification model on the Training set
+classifier = DecisionTreeClassifier(criterion='entropy', random_state=0)
 classifier.fit(X_train, y_train)
 
 # Predict the new result
